@@ -1,14 +1,15 @@
 const mongoDB = require('mongodb');
 const MongoClient = mongoDB.MongoClient;
+const uri = 'mongodb+srv://Admin-user:Admin1234@capturing.csqjv.mongodb.net/?retryWrites=true&w=majority&appName=Capturing'
 
 let _db;
 const connectDB = (callbackFunction) => 
     {
-        MongoClient.connect(
-'mongodb+srv://srayayoav:<db_password>@capturing.csqjv.mongodb.net/?retryWrites=true&w=majority&appName=Capturing')
+        MongoClient.connect(uri
+)
             .then( client => {
                 console.log("connected");
-                _db = client.db('moveoDataBase');
+                _db = client.db('capturing');
                 callbackFunction(client);
             })
             .catch(
