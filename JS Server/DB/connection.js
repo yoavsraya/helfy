@@ -1,8 +1,8 @@
 const mongoDB = require('mongodb');
 const MongoClient = mongoDB.MongoClient;
 const uri = 'mongodb+srv://Admin-user:Admin1234@capturing.csqjv.mongodb.net/?retryWrites=true&w=majority&appName=Capturing'
-
 let _db;
+
 const connectDB = (callbackFunction) => 
     {
         MongoClient.connect(uri
