@@ -1,1 +1,21 @@
-node_modules
+# Ignore virtual environment
+AI-server/python-server/venv
+
+# Python cache files
+AI-server/python-server/__pycache__
+*.pyc
+*.pyo
+
+# Node.js dependencies
+web-server/JS Server/node_modules
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+AI-server/python-server/venv/
