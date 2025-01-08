@@ -5,14 +5,17 @@ const connectDB = require('./DB/connection').connectDB;
 const express = require('express');
 const app = express();
 const server = http.createServer(app);
-
-const capturingRoute = require('./routes/capturing')
-
 const bodyParser = require('body-parser');
+
+const sensorCapturingRoute = require('./routes/sensor-capturing')
+const manualPictureRoute = require('./routes/manual-picture')
+
 app.use(bodyParser.json());
+app.use(cors());
 
 
-app.use('/data', capturingRoute);
+app.use('/sensor', sensorCapturingRoute);
+app.use('/manual', manualPictureRoute);
 
 
 app.use('/', (req, res) => {
