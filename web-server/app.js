@@ -1,4 +1,5 @@
 const http = require('http');
+const cors = require('cors');
 
 const connectDB = require('./DB/connection').connectDB;
 
